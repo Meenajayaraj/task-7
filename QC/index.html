@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<h1>Right click to inspect and check output in console</h1>
+<body>
+    <script>
+        URL = "https://restcountries.com/v3.1/all";
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", URL);
+        xhr.send(); 
+        console.log(xhr);
+        xhr.onload = () => {
+            console.log(JSON.parse(xhr.response))
+            let result_array = JSON.parse(xhr.response);
+            result_array.forEach(obj => {
+                console.log(obj.name, obj.capital, obj.flag);
+
+            });
+        }
+    </script>
+</body>
+
+</html>

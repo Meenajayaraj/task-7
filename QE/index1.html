@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<h1>Right click to inspect and check output in console</h1>
+<body>
+    <script>
+        URL = "https://restcountries.com/v3.1/all";
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", URL);
+        xhr.send();
+       // console.log(xhr);
+        xhr.onload = () => {
+           // console.log(JSON.parse(xhr.response))
+let array = JSON.parse(xhr.response)
+            const res = array.filter(obj => obj.currencies && obj.currencies.USD)
+                .map(obj => obj.name.common)
+            console.log(res);   
+        }
+    </script>
+</body>
+
+</html>
