@@ -1,13 +1,13 @@
 # TASK-7
 ## ARRAY METHODS
-> Qa
+* Qa
 Get all the countries from Asia continent /region using Filter function
-> QB
+* QB
 Get all the countries with a population of less than 2 lakhs using Filter function
-> QC
+* QC
 Print the following details name, capital, flag, using forEach function
-> QD
+* QD
 Print the total population of countries using reduce function
-> QE
+* QE
 Print the country that uses US dollars as currency.
 
